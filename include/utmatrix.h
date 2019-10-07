@@ -278,7 +278,7 @@ TMatrix<ValType>& TMatrix<ValType>::operator=(const TMatrix<ValType> &mt)
 template <class ValType> // сложение
 TMatrix<ValType> TMatrix<ValType>::operator+(const TMatrix<ValType> &mt)
 {
-	if (Size == mt.Size)
+	if (TVector<TVector<ValType> >::Size == mt.Size)
 		return TVector< TVector<ValType> >::operator+(mt);
 	else
 		throw "Different sizes";
@@ -287,7 +287,7 @@ TMatrix<ValType> TMatrix<ValType>::operator+(const TMatrix<ValType> &mt)
 template <class ValType> // вычитание
 TMatrix<ValType> TMatrix<ValType>::operator-(const TMatrix<ValType> &mt)
 {
-	if (Size == mt.Size)
+	if (TVector<TVector<ValType> >::Size == mt.Size)
 		return TVector< TVector<ValType> >::operator-(mt);
 	else
 		throw "Different sizes";
